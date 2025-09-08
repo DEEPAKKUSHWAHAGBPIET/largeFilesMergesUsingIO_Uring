@@ -14,7 +14,7 @@ struct file_ctx {
     const char *name;
 };
 
-// ------------------------------------
+
 int main() {
     struct io_uring ring;
     io_uring_queue_init(MAX_FILES, &ring, 0);
@@ -82,6 +82,6 @@ int main() {
     close(output_fd);
     io_uring_queue_exit(&ring);
 
-    printf("✅ Merged into merged_output.txt in completion order.\n");
+    printf("Merged into merged_output.txt in completion order.\n");
     return 0;
 }
